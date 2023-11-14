@@ -1,0 +1,90 @@
+article.accounting, article.other, article.registration, article.withdrawals, article.wish-list, article.about {
+    display: none;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: var(--main-inner);
+}
+article.accounting .content, article.other .content {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+#balance {
+    min-width: 200px;
+    margin: 5px;
+    padding: 50px 10px;
+    font-size: calc(25px + var(--f-remainder));
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--icons-pallete), var(--c-500-after-3));
+}
+article.accounting div.info {
+    width: 250px;
+    margin: 5px;
+}
+article.accounting div.info h4 {
+    font-size: calc(25px + var(--f-remainder));
+    color: var(--text);
+    margin: 10px 0;
+}
+article.accounting div.info p {
+    font-size: calc(12px + var(--f-remainder));
+    color: var(--text-gray);
+    margin: 10px 0;
+}
+
+
+article.other .content nav {
+    width: 200px;
+    margin: 5px;
+    border: 5px solid var(--main);
+    border-radius: 10px;
+}
+article.other .content nav button {
+    width: calc(100% - 4px);
+    margin: 2px;
+    border-radius: 3px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+article.rules {
+    flex-direction: column;
+}
+article.rules a:hover {
+    text-decoration: underline;
+}
+article.rules nav.content {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 15px);
+    padding: 2.5px;
+}
+article.rules nav.content button {
+    flex: 1;
+    margin: 2.5px;
+}
+article.rules a {
+    font-size: calc(15px + var(--f-remainder));
+    color: var(--text);
+    margin: 5px 0;
+}
+
+
+article.course-management, article.app-management {
+    flex-direction: column;
+}
+
+
+p.error {
+    margin: 10px;
+    font-size: calc(13px + var(--f-remainder));
+    color: var(--sign-out);
+}
