@@ -1,0 +1,115 @@
+aside.desktop {
+    width: min-content;
+    padding: 2.5px;
+    background-color: var(--main);
+}
+aside.desktop nav {
+    width: calc(100% - 10px);
+    margin: 2.5px;
+    padding: 2.5px;
+    border-radius: 10px;
+    background-color: var(--main-inner);
+}
+
+
+aside.mobile {
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+
+    position: fixed;
+    bottom: 5px;
+    left: 5vw;
+    width: 90%;
+    border: 5px solid var(--main);
+    border-radius: 30px;
+    background-color: var(--main-inner);
+    z-index: 1;
+}
+aside.mobile button {
+    justify-content: center;
+    width: calc(25% - 5px);
+    margin: 5px;
+    border-radius: 20px;
+}
+aside.mobile button svg {
+    margin: 0;
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 5px);
+    padding: 7px;
+    margin: 2.5px;
+    border: none;
+    border-radius: 7px;
+    background-color: transparent;
+    color: var(--text-gray);
+    font-size: calc(12px + var(--f-remainder));
+    font-family: var(--ff);
+    cursor: pointer;
+    transition: 0.2s;
+}
+button svg {
+    margin: -2.5px 0;
+    margin-right: 10px;
+}
+button p {
+    text-align: start;
+    margin: 0;
+}
+button.selected {
+    background-color: var(--icons-pallete);
+    color: white;
+}
+
+
+/*hovers*/
+button:hover, button.home:hover {
+    background-color: var(--main);
+}
+button.selected:hover {
+    background-color: var(--icons-pallete);
+}
+#sign-out-btn:hover {
+    color: white;
+    background-color: var(--sign-out);
+}
+
+
+
+@media (max-width: 1080px) {
+    aside.desktop {
+        resize: none;
+    }
+}
+@media (max-width: 900px) {
+    aside.desktop {
+        width: min-content;
+        padding: 0;
+        border-radius: 12.5px;
+        border: none;
+        background-color: transparent;
+    }
+    aside.desktop nav {
+        margin: 5px 0 0 0;
+        padding: 0;
+        border: 0.5px solid var(--shadow);
+    }
+    aside.desktop button svg {
+        margin: -5px 0;
+    }
+    aside.desktop button p {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    aside.desktop {
+        display: none;
+    }
+    aside.mobile {
+        display: flex;
+    }
+}
